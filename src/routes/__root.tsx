@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Waqas Ahmed — Android Developer" },
+      { name: "description", content: "Portfolio of Waqas Ahmed, Android developer with 2+ years of experience shipping 15+ native apps in Kotlin, Java, Jetpack Compose, and Firebase." },
+      { name: "author", content: "Waqas Ahmed" },
+      { property: "og:title", content: "Waqas Ahmed — Android Developer" },
+      { property: "og:description", content: "Native Android apps in Kotlin, Jetpack Compose, Firebase, Google Maps. 15+ apps shipped to the Play Store." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
