@@ -19,14 +19,23 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Setup Bun (Fast Node Alternative)
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install Dependencies
+        run: bun install
+
+      - name: Build Project
+        run: bun run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Agar aapki files kisi folder mein hain to '.' ki jagah folder ka naam likhein (e.g., 'public')
-          path: '.'
+          # Vite compile hone ke baad 'dist' folder banata hai
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
