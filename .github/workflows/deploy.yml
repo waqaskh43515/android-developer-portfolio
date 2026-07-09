@@ -19,18 +19,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
 
       - name: Install Dependencies
-        run: npm install --legacy-peer-deps
+        run: bun install
 
       - name: Build Project
         run: |
-          # Agar build ke doran TypeScript ka ya koi chota error aaye to use ignore karo aur files generate karo
-          npm run build --if-present || true
+          # Agar build mein koi masla ho tab bhi process ko mat roko
+          bun run build || true
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
